@@ -1,92 +1,124 @@
 import "./App.css";
 
-const games = [
-  { id: 1, title: "Snake Game", url: "#" },
-  { id: 2, title: "Memory Game", url: "#" },
-  { id: 3, title: "Tic Tac Toe", url: "#" },
-  { id: 4, title: "Quiz Game", url: "#" },
-];
-
 function App() {
   return (
-    <div className="app">
-      <header className="header">
-        <h1>Shrey Games</h1>
-        <p>Game Developer | JavaScript • React</p>
-      </header>
+    <div className="app-container">
+      {/* HEADER */}
+      <h1 className="title">Shrey Chadokar</h1>
+      <p className="subtitle">Frontend / MERN Stack Developer</p>
 
-      {/* ABOUT */}
-      <section className="about-section">
-        <h2>About Me</h2>
-        <p className="about-text">
-          I am a passionate frontend and game developer who builds
-          interactive, browser-based games using modern web technologies.
-          I focus on clean UI, performance, and scalable code.
-        </p>
-      </section>
+      {/* PROJECTS SECTION */}
+      <section className="projects">
+        <h2>Projects</h2>
 
-      {/* SKILLS */}
-      <section className="skills-section">
-        <h2>Skills</h2>
-        <div className="skills">
-          <span>JavaScript</span>
-          <span>React.js</span>
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>Vite</span>
-          <span>Git & GitHub</span>
-        </div>
-      </section>
+        <div className="project-cards">
+          {/* CARD 1 */}
+          <div className="card">
+            <h3>Game Portfolio</h3>
+            <p>
+              A React-based game portfolio website deployed on Vercel with
+              GitHub integration.
+            </p>
+            <p className="tech">Tech: React, Vite, CSS</p>
 
-      {/* GAMES */}
-      <section className="games-section">
-        <h2>My Games</h2>
-
-        <div className="games-wrapper">
-          <div className="games">
-            {games.map((game) => (
+            <div className="buttons">
               <a
-                key={game.id}
-                href={game.url}
+                href="https://shrey-portfolio-sigma.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="game-card"
               >
-                {game.title}
+                Live
               </a>
-            ))}
+              <a
+                href="https://github.com/ShreyChadokar123/ShreyPortfolio"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+
+          {/* CARD 2 */}
+          <div className="card">
+            <h3>EMI Calculator</h3>
+            <p>
+              EMI calculator with dynamic charts and yearly breakdown.
+            </p>
+            <p className="tech">Tech: React, Chart.js, Bootstrap</p>
+
+            <div className="buttons">
+              <span className="coming">Live Soon</span>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* ABOUT SECTION */}
+      <section className="about">
+        <h2>About Me</h2>
+
+        <p className="about-text">
+          Frontend / MERN Stack Developer with experience in building responsive
+          React applications and deploying them on Vercel.
+        </p>
+
+        <a
+          className="resume-btn"
+          href="/Shrey_Chadokar_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Download Resume
+        </a>
+      </section>
+
+
+      {/* SKILLS SECTION */}
+<section className="skills">
+  <h2>Skills</h2>
+
+  <div className="skills-list">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>React</span>
+    <span>Node.js</span>
+    <span>Express</span>
+    <span>MongoDB</span>
+    <span>Git</span>
+    <span>GitHub</span>
+    <span>Vercel</span>
+  </div>
+</section>
+
+
       {/* FOOTER */}
       <footer className="footer">
-  <p>© {new Date().getFullYear()} Shrey Chadokar</p>
+        <p>© {new Date().getFullYear()} Shrey Chadokar</p>
 
-  <div className="social-links">
-    <a
-      href="https://github.com/ShreyChadokar123"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      🐙 GitHub
-    </a>
+        <div className="social-links">
+          <a
+            href="https://github.com/ShreyChadokar123"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
 
-    <a
-  href="https://www.linkedin.com/in/shrey-chadokar-895b72265/"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  💼 LinkedIn
-</a>
+          <a
+            href="https://www.linkedin.com/in/shrey-chadokar-895b72265/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
 
-<a href="mailto:shreychadokar@gmail.com">
-  ✉️ Email
-</a>
-
-  </div>
-</footer>
-
+          <a href="mailto:shreychadokar@gmail.com">
+            Email
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
